@@ -34,3 +34,20 @@ while True:
 # محاسبه و نمایش نتیجه
 result = factorial(n)
 print(f"\n{n}! = {result}")
+
+while True:
+    try:
+        # گرفتن ورودی از کاربر
+        user_input = input("لطفاً یک عدد صحیح فرد وارد کنید: ")
+        number = int(user_input)
+        
+        # بررسی زوج یا فرد بودن
+        if number % 2 == 1:  # عدد فرد است
+            print(f"✅ عالی! عدد فرد وارد شد: {number}")
+            break  # خروج از حلقه
+        else:  # عدد زوج است
+            print("❌ عدد زوج است. لطفاً یک عدد فرد وارد کنید.")
+            
+    except ValueError:
+        # اگر کاربر عدد وارد نکند
+        print("❌ خطا: لطفاً فقط یک عدد صحیح وارد کنید.")
